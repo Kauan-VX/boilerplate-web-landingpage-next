@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.swiper-pagination-bullet {
-  background-color: gray !important;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
-
 * {
   -webkit-font-smoothing: antialiased;
 }
@@ -19,19 +13,13 @@
     .item {
       width: 100%;
       overflow: visible;
-      // stroke: #0000006e;
-      // strokewidth: 1;
-      // strokelinejoin: round;
-      // strokelinecap: round;
       @apply dark:stroke-[#ffffff4b] light:stroke-[#0000006e]
-
     }
     #root {
       height: 100%;
       width: 100%;
       margin: 0;
       padding: 0;
-      /* Prevents overflow on the x-axis */
       overflow-x: hidden;
     }
     section {
@@ -43,40 +31,5 @@
         }
       }
     }
-
-    .animation-text {
-      @apply transition ease-in-out duration-700;
-    }
-
-    svg {
-      .animation-100 {
-        @apply transition ease-in-out duration-1000 delay-100;
-      }
-
-      .animation-300 {
-        @apply transition ease-in-out duration-1000 delay-300;
-      }
-
-      .animation-500 {
-        @apply transition ease-in-out duration-1000 delay-500;
-      }
-    }
-  }
-  .link-skills {
-    @apply flex items-center rounded-3xl py-[0.5rem] px-[0.7rem] font-medium gap-2 dark:text-dark-text text-light-text dark:bg-dark-background-transparent bg-light-background-transparent  shadow-3xl;
-    Image {
-      @apply w-full max-w-[48px];
-    }
-  }
-
-  .header-presentation {
-    h1 {
-      b {
-      }
-    }
-  }
-
-  .icon-skill {
-    @apply w-full max-w-6;
   }
 }

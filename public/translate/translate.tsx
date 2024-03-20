@@ -1,6 +1,6 @@
 export const TranslateIcon = () => {
     return (
-    <div className="">
+    <div className="size-full">
    <svg 
   className="dark:fill-dark-text fill-light-text"
  width="32px" height="32px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
