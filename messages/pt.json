@@ -1,10 +1,11 @@
 {
   "Navbar" : {
+    "home" : "Início",
     "about" : "Sobre",
-    "education": "Educação",
-    "skills": "Habilidades",
-    "projects": "Projetos",
     "contact": "Contato"
+  },
+  "NotFound" : {
+"title" : "Pagina não existe"
   }
 }
 

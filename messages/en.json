@@ -1,9 +1,10 @@
 {
   "Navbar" : {
+    "home" : "Home",
     "about" : "About",
-    "education": "Education",
-    "skills": "Skills",
-    "projects": "Projects",
     "contact": "Contact"
+  },
+  "NotFound" : {
+"title" : "Page does not exist"
   }
 }

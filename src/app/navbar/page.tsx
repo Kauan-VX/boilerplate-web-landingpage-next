@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import {
   Link,
@@ -9,26 +9,24 @@ import {
   NavbarMenu,
   NavbarMenuItem,
   NavbarMenuToggle,
-} from '@nextui-org/react'
-import React from 'react'
-import ThemeSwitcher from '../theme-switcher'
+} from "@nextui-org/react";
+import React from "react";
+import ThemeSwitcher from "../theme-switcher";
 
-import { motion } from 'framer-motion'
-import { useTranslations } from 'next-intl'
-import DropDownLanguage from '../components/language/dropdown-language'
-import { Logo } from './logo'
+import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
+import DropDownLanguage from "../components/language/dropdown-language";
+import { Logo } from "./logo";
 
 export default function NavbarComponent() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false)
-  const t = useTranslations('Navbar')
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const t = useTranslations("Navbar");
 
   const menuItems = [
-    { name: `${t('about')}`, link: '#about' },
-    { name: `${t('education')}`, link: '#education' },
-    { name: `${t('skills')}`, link: '#skills' },
-    { name: `${t('projects')}`, link: '#projects' },
-    { name: `${t('contact')}`, link: '#conect' },
-  ]
+    { name: `${t("home")}`, link: "#home" },
+    { name: `${t("about")}`, link: "#about" },
+    { name: `${t("contact")}`, link: "#conect" },
+  ];
 
   return (
     <Navbar
@@ -36,10 +34,10 @@ export default function NavbarComponent() {
       onMenuOpenChange={setIsMenuOpen}
       className="shadow-sm"
     >
-      <NavbarContent>
+      <NavbarContent className="!flex-grow-0">
         <NavbarItem className="z-10 size-10">
           <NavbarMenuToggle
-            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             className="sm:hidden"
           />
         </NavbarItem>
@@ -59,7 +57,7 @@ export default function NavbarComponent() {
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
-        <NavbarItem isActive>
+        <NavbarItem>
           <motion.div>
             <Link
               className="text-lg smMax:text-sm"
@@ -67,7 +65,19 @@ export default function NavbarComponent() {
               href="#about"
               aria-current="page"
             >
-              {t('about')}
+              {t("home")}
+            </Link>
+          </motion.div>
+        </NavbarItem>
+        <NavbarItem>
+          <motion.div>
+            <Link
+              className="text-lg smMax:text-sm"
+              color="foreground"
+              href="#about"
+              aria-current="page"
+            >
+              {t("about")}
             </Link>
           </motion.div>
         </NavbarItem>
@@ -75,40 +85,13 @@ export default function NavbarComponent() {
           <Link
             className="text-lg smMax:text-sm"
             color="foreground"
-            href="#education"
-          >
-            {t('education')}
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link
-            className="text-lg smMax:text-sm"
-            color="foreground"
-            href="#skills"
-          >
-            {t('skills')}
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link
-            className="text-lg smMax:text-sm"
-            color="foreground"
-            href="#projects"
-          >
-            {t('projects')}
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link
-            className="text-lg smMax:text-sm"
-            color="foreground"
             href="#conect"
           >
-            {t('contact')}
+            {t("contact")}
           </Link>
         </NavbarItem>
       </NavbarContent>
-      <NavbarContent className='flex items-center justify-center gap-0' >
+      <NavbarContent className="flex items-center justify-center gap-0  !flex-grow-0">
         <NavbarItem>
           <DropDownLanguage></DropDownLanguage>
         </NavbarItem>
@@ -131,5 +114,5 @@ export default function NavbarComponent() {
         ))}
       </NavbarMenu>
     </Navbar>
-  )
+  );
 }
