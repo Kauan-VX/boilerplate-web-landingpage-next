@@ -11,11 +11,11 @@ import {
   NavbarMenuToggle,
 } from "@nextui-org/react";
 import React from "react";
-import ThemeSwitcher from "../theme-switcher";
 
+import ThemeSwitcher from "../../components/theme/theme-switcher";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-import DropDownLanguage from "../components/language/dropdown-language";
+import DropDownLanguage from "../../components/language/dropdown-language";
 import { Logo } from "./logo";
 
 export default function NavbarComponent() {
@@ -56,7 +56,7 @@ export default function NavbarComponent() {
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+      <NavbarContent className="hidden p-4 sm:flex gap-4" justify="center">
         <NavbarItem>
           <motion.div>
             <Link
