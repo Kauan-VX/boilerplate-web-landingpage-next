@@ -22,14 +22,5 @@
       padding: 0;
       overflow-x: hidden;
     }
-    section {
-      @apply transition ease-in-out duration-700 h-heightLessNav  w-full  bg-light-background  dark:bg-dark-background p-4 overflow-hidden;
-
-      header {
-        .title {
-          @apply text-6xl bigphoneMax:text-4xl;
-        }
-      }
-    }
   }
 }

@@ -96,7 +96,7 @@ export default function NavbarComponent() {
           <LangSelect></LangSelect>
         </NavbarItem>
         <NavbarItem>
-          <ThemeSwitcher></ThemeSwitcher>
+          <ThemeSwitcher />
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu>
