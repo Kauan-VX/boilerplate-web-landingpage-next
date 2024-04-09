@@ -41,21 +41,21 @@ export default function Home() {
 
   return (
     <main className="h-screen w-screen">
-      <div className="flex size-full bg-white">
-        <div className="w-1/2 flex justify-center items-center">
+      <div className="flex size-full bg-white lgMax:flex-col lgMax:gap-4">
+        <div className="w-1/2 flex justify-center items-center lgMax:w-full p-4">
           <Image
             src={"/logo.svg"}
             width={32}
             height={32}
             alt="Moon"
-            className="size-96"
+            className="size-96 lgMax:size-32"
           />
         </div>
-        <div className="w-1/2 size-full bg-black flex flex-col items-center justify-center">
-          <div className="flex flex-col  items-center justify-center rounded-xl p-8 border-1">
+        <div className="w-1/2 size-full bg-black flex flex-col items-center justify-center lgMax:w-full p-4 lgMax:rounded-t-3xl  text-white">
+          <div className="flex flex-col  items-center justify-center rounded-xl p-8 border-1 lgMax:border-none lgMax:p-0">
             <header className="flex flex-col items-center mb-4 gap-2">
               <h1 className="text-4xl ">Entrar</h1>
-              <Link href={"/"}>Não possui conta? Cadastre-se</Link>
+              <Link href={"/"}>Não sss possui conta? Cadastre-se</Link>
             </header>
 
             <form
@@ -68,6 +68,7 @@ export default function Home() {
                 label="Email"
                 placeholder="Insira o email"
                 errorMessage={errors.username?.message}
+                variant="faded"
               />
               <Input
                 {...register("password")}
@@ -75,12 +76,17 @@ export default function Home() {
                 label="Senha"
                 placeholder="Insira a senha"
                 errorMessage={errors.password?.message}
+                variant="faded"
               />
               <span className="flex justify-end w-full">
                 <Link href={"/"}>Esqueceu sua senha?</Link>
               </span>
 
-              <Checkbox color="secondary" defaultSelected>
+              <Checkbox
+                className="text-white"
+                color="secondary"
+                defaultSelected
+              >
                 Lembrar-me
               </Checkbox>
               <Button

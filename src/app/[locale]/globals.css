@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer components {
+  body {
+    scroll-behavior: smooth;
+    @apply h-full w-full m-0 p-0 transition ease-in-out duration-700  dark:bg-dark-background  bg-light-background scroll-smooth overflow-x-hidden;
+  }
+  body .item {
+    width: 100%;
+    overflow: visible;
+    @apply dark:stroke-[#ffffff4b] light:stroke-[#0000006e];
+  }
+  body #root {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  body section {
+    @apply transition ease-in-out duration-700 h-heightLessNav  w-full  bg-light-background  dark:bg-dark-background p-4 overflow-hidden;
+  }
+  body section header .title {
+    @apply text-6xl bigphoneMax:text-4xl;
+  }
+}/*# sourceMappingURL=globals.css.map */

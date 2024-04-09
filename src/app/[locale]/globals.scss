@@ -13,7 +13,7 @@
     .item {
       width: 100%;
       overflow: visible;
-      @apply dark:stroke-[#ffffff4b] light:stroke-[#0000006e]
+      @apply dark:stroke-[#ffffff4b] light:stroke-[#0000006e];
     }
     #root {
       height: 100%;
@@ -27,7 +27,7 @@
 
       header {
         .title {
-          @apply text-6xl phoneMax:text-4xl;
+          @apply text-6xl bigphoneMax:text-4xl;
         }
       }
     }

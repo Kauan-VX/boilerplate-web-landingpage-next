@@ -12,10 +12,10 @@ import {
 } from "@nextui-org/react";
 import React from "react";
 
-import ThemeSwitcher from "../../components/theme/theme-switcher";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-import DropDownLanguage from "../../components/language/dropdown-language";
+import LangSelect from "../language/lang-select";
+import ThemeSwitcher from "../theme/theme-switcher";
 import { Logo } from "./logo";
 
 export default function NavbarComponent() {
@@ -93,7 +93,7 @@ export default function NavbarComponent() {
       </NavbarContent>
       <NavbarContent className="flex items-center justify-center gap-0  !flex-grow-0">
         <NavbarItem>
-          <DropDownLanguage></DropDownLanguage>
+          <LangSelect></LangSelect>
         </NavbarItem>
         <NavbarItem>
           <ThemeSwitcher></ThemeSwitcher>
